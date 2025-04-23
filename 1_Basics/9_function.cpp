@@ -12,6 +12,7 @@ void calculate(int a, int b){
 char ConvertToUpperCase(char ch){
       char ans=ch-'a'+'A';
       return ans;
+      
 }
 
 int main(){\
