@@ -9,6 +9,8 @@ int main(){
             cin>>arr[i];
       }
 
+      double arr2[1e6];
+
       //precompute
       int hasharr[n+1]={0};
       for(int i=0;i<n;i++){
