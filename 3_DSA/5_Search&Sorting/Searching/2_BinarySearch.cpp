@@ -2,30 +2,28 @@
 #include <vector>
 using namespace std;
 
-int binarySearch(const vector<int>& arr, int target) {
-int left = 0, right = arr.size() - 1;
-      while (left <= right) {
-
-            int mid = left + (right - left) / 2;
-            if (arr[mid] == target)
+class Solution {
+public:
+      int binarySearch(vector<int>& nums, int target) {
+            int n = nums.size();
+            if(n==1 && nums[n-1]==target){
+                  return n-1;
+            }
+            int low = 0;
+            int high = n-1;
+            while(low<=high){
+                  int mid = low + ((high-low)/2);
+                  if(nums[mid]==target){
                   return mid;
-            else if (arr[mid] < target)
-                  left = mid + 1; 
-            else
-                  right = mid - 1; 
-      }
-      return -1; 
-      }
-
-int main() {
-      vector<int> arr = {2, 4, 8, 10, 20, 29};
-      int target = 10;
-      int index = binarySearch(arr, target);
-
-      if (index != -1)
-            cout << "Element found at index " << index << endl;
-      else
-            cout << "Element not found." << endl;
+                  }else if(nums[mid]>target){
+                  high = mid-1;
+                  }else{
+                  low = mid+1;
+                  }
+            }
+            return -1;
+    }
+};
 
       /*
       ----------- Usage ---------------
@@ -44,5 +42,4 @@ int main() {
       - Cannot be used on unsorted arrays.
       - Implementation for complex data types (custom comparisons) needs care.
       */
-      return 0;
-}
+// We will not use while loop for recursive approach
