@@ -4,6 +4,14 @@
             "algorithm": "cpp",
             "forward_list": "cpp",
             "list": "cpp",
-            "set": "cpp"
+            "set": "cpp",
+            "xstring": "cpp",
+            "deque": "cpp",
+            "queue": "cpp",
+            "stack": "cpp",
+            "xhash": "cpp",
+            "xlocinfo": "cpp",
+            "xtree": "cpp",
+            "xutility": "cpp"
       }
 }
