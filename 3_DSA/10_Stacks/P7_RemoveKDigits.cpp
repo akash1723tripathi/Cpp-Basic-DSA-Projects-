@@ -82,37 +82,3 @@ public:
 
 // another optimal approach
 
-class Solution {
-public:
-      string removeDuplicateLetters(string s) {
-            vector<int> count(26, 0);
-            vector<bool> inStack(26, false);
-            stack<char> st;
-
-            for(char c : s) count[c - 'a']++;
-
-            for(char c : s){
-                  int idx = c - 'a';
-                  count[idx]--;
-
-                  if(inStack[idx]) continue;
-
-                  while(!st.empty() && st.top() > c && count[st.top() - 'a'] > 0){
-                  inStack[st.top() - 'a'] = false;
-                  st.pop();
-                  }
-
-                  st.push(c);
-                  inStack[idx] = true;
-            }
-
-            string res;
-            while(!st.empty()){
-                  res += st.top();
-                  st.pop();
-            }
-            reverse(res.begin(), res.end());
-
-            return res;
-      }
-};
