@@ -66,7 +66,7 @@ int main(){
       cout << "Printing the array: " << endl;
       for (int i = 1; i <= n; i++) {          // Print 1-based array
             cout << arr[i] << " ";
-      }
+      } 
       cout << endl;
 
       heapSort(arr,n);
