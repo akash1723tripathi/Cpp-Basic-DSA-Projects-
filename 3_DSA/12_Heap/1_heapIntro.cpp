@@ -1,21 +1,17 @@
 #include <iostream>
 using namespace std;
 
-class heap
-{
+class heap{
 public:
       int arr[100];
       int size;
 
       // Constructor
-      heap()
-      {
-            // 0-based indexing starts with size 0, no dummy value needed
+      heap(){
             size = 0;
       }
 
-      void insert(int val)
-      {
+      void insert(int val){
             // 1. Insert at the end (current size index)
             int index = size;
             arr[index] = val;
