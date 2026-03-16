@@ -13,15 +13,16 @@ public:
 
                   //for comaprision ch with every other string
                   for(int j=1;j<n;j++){
-                  if(strs[j].size()<i || ch!=strs[j][i]){
-                        match=false;
-                        break;
+                        if(strs[j].size()<i || ch!=strs[j][i]){
+                              match=false;
+                              break;
+                        }
                   }
-                  }
+
                   if(match == false){
-                  break;
+                        break;
                   }else{
-                  ans.push_back(ch);
+                        ans.push_back(ch);
                   }
             }
       return ans;
