@@ -1,6 +1,6 @@
 // for an arr to return indices of the elements which adds up to given target
 
-// best for to return indecies--use map ---> worst O(n^2)
+// best for to return indecies--use map ---> worst O(n^2) 
 class Solution
 {
 public:

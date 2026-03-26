@@ -22,7 +22,7 @@ public:
 // appraoch 2 - min heap 
 #include<queue>
 int getkthLargest(vector<int> &arr, int k){
-      priority_queue<int,vector<int>,greater<int>. mini;
+      priority_queue<int,vector<int>,greater<int> mini;
       int n=arr.size();
       for(int i=0;i<n;i++){
             int sum=0;
